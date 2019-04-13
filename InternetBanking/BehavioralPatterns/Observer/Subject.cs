@@ -4,24 +4,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using InternetBanking.CreationalPatterns;
 
 namespace InternetBanking.BehavioralPatterns.Observer
 {
     public class Subject:ISubject
     {
         private List<Observer> observers = new List<Observer>();
-        private int _int;
-        public int Inventory
+        private double _previousBalance;
+
+        public Subject(double balance)
+        {
+           _previousBalance = balance;//when I create the subject i give him current balance of ClientAccount
+        }
+        public double CurrentBalance
         {
             get
             {
-                return _int;
+                return _previousBalance;
             }
             set
             {
-                if (value > _int)
+                if (value > _previousBalance)
                     Notify();
-                _int = value;
+                _previousBalance = value;
             }
         }
 
