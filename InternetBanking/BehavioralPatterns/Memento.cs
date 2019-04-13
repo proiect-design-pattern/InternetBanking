@@ -8,5 +8,10 @@ namespace InternetBanking.BehavioralPatterns
 {
    public class Memento
    {
+        public int State { get; set; }
+        public Memento(int state)
+        {
+            this.State = state;
+        }
    }
 }
