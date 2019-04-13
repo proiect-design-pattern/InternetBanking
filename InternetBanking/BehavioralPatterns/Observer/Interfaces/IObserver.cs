@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InternetBanking.BehavioralPatterns
+namespace InternetBanking.BehavioralPatterns.Observer.Interfaces
 {
-   public class Observer
-   {
-   }
+    interface IObserver
+    {
+        void Update();
+    }
 }

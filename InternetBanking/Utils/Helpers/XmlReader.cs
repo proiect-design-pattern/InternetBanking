@@ -45,5 +45,4 @@ namespace InternetBanking.Utils.Helpers
          }
       }
    }
-   }
 }

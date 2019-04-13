@@ -44,8 +44,11 @@
   <ItemGroup>
     <Compile Include="BehavioralPatterns\Memento\Caretaker.cs" />
     <Compile Include="BehavioralPatterns\Memento\Memento.cs" />
-    <Compile Include="BehavioralPatterns\Observer.cs" />
+    <Compile Include="BehavioralPatterns\Observer\Interfaces\IObserver.cs" />
+    <Compile Include="BehavioralPatterns\Observer\Interfaces\ISubject.cs" />
+    <Compile Include="BehavioralPatterns\Observer\Observer.cs" />
     <Compile Include="BehavioralPatterns\Memento\Tranzactie.cs" />
+    <Compile Include="BehavioralPatterns\Observer\Subject.cs" />
     <Compile Include="CreationalPatterns\Factory.cs" />
     <Compile Include="CreationalPatterns\Singleton.cs" />
     <Compile Include="Program.cs" />
