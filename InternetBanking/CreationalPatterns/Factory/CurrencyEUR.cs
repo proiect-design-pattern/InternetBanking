@@ -14,7 +14,7 @@ namespace InternetBanking.CreationalPatterns.Factory
 
         public void Deposit(double value)
         {
-            
+            Client = ClientAccount.Instance();
             Deposit(value);
         }
     }
