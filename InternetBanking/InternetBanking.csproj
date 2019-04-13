@@ -48,9 +48,11 @@
     <Compile Include="CreationalPatterns\Singleton.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StructuralPatterns\Flyweight\CashRegister.cs" />
+    <Compile Include="StructuralPatterns\Flyweight\Money.cs" />
+    <Compile Include="StructuralPatterns\Flyweight\TransferHandler.cs" />
     <Compile Include="StructuralPatterns\Interfaces\IAccount.cs" />
     <Compile Include="StructuralPatterns\SafeAccountProxy.cs" />
-    <Compile Include="StructuralPatterns\Flyweight.cs" />
     <Compile Include="Utils\EAccountType.cs" />
     <Compile Include="Utils\EBillType.cs" />
     <Compile Include="Utils\EMobilePhoneNetwork.cs" />
