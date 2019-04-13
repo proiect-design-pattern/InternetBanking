@@ -42,10 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BehavioralPatterns\Caretaker.cs" />
-    <Compile Include="BehavioralPatterns\Memento.cs" />
+    <Compile Include="BehavioralPatterns\Memento\Caretaker.cs" />
+    <Compile Include="BehavioralPatterns\Memento\Memento.cs" />
     <Compile Include="BehavioralPatterns\Observer.cs" />
-    <Compile Include="BehavioralPatterns\Tranzactie.cs" />
+    <Compile Include="BehavioralPatterns\Memento\Tranzactie.cs" />
     <Compile Include="CreationalPatterns\Factory.cs" />
     <Compile Include="CreationalPatterns\Singleton.cs" />
     <Compile Include="Program.cs" />
