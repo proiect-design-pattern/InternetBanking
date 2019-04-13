@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InternetBanking.StructuralPatterns
 {
-   class Flyweight
+   public class Flyweight
    {
    }
 }
