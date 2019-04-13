@@ -50,7 +50,8 @@ namespace InternetBanking
                 case 0:
 
                 default:
-                    "Alegeți o variantă"
+                   "Alegeți o variantă";
+                   break;
             }
         }
     }
