@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InternetBanking.Utile
+namespace InternetBanking.Utils.PublicEnums
 {
    public enum EBillType
    {
