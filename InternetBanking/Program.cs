@@ -10,7 +10,7 @@ namespace InternetBanking
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("1: Schimbă parola:"+"\n");
+            Console.WriteLine("1: Schimbă parola:" + "\n");
             Console.WriteLine("2: Curs de schimb valutar"+"\n");
             Console.WriteLine("3: Schimb valutar"+"\n");
             Console.WriteLine("4: Trimite bani"+"\n");
