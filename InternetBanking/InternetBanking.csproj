@@ -52,7 +52,7 @@
     <Compile Include="CreationalPatterns\Factory\CurrencyProfileFactory.cs" />
     <Compile Include="CreationalPatterns\Factory\ECurrencyProfile.cs" />
     <Compile Include="CreationalPatterns\Factory\Interfaces\ICurrencyProfile.cs" />
-    <Compile Include="CreationalPatterns\Singleton.cs" />
+    <Compile Include="CreationalPatterns\ClientAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StructuralPatterns\Flyweight\CashRegister.cs" />

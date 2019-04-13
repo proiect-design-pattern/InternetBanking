@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using InternetBanking.CreationalPatterns.Factory.Interfaces;
 
 namespace InternetBanking.CreationalPatterns.Factory
 {
@@ -15,7 +16,7 @@ namespace InternetBanking.CreationalPatterns.Factory
             {
                 case ECurrencyProfile.EUR:
                     {
-                        currency = new ECurrencyProfile.EUR();
+                        currency = new ECurrencyProfile.EUR;
                         break;
                     }
             }

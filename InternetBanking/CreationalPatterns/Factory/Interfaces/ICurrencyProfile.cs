@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InternetBanking.CreationalPatterns.Factory
+namespace InternetBanking.CreationalPatterns.Factory.Interfaces
 {
-    interface ICurrencyProfile
+    public interface ICurrencyProfile
     {
+        ClientAccount Client { get; set; }
         void CurrencyType(ECurrencyProfile currencyProfile);
     }
 }
