@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InternetBanking.BehavioralPatterns
 {
-   class Memento
+   public class Memento
    {
    }
 }
