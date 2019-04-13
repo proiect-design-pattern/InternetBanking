@@ -55,9 +55,14 @@
     <Compile Include="CreationalPatterns\ClientAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StructuralPatterns\Flyweight\CashRegister.cs" />
-    <Compile Include="StructuralPatterns\Flyweight\Money.cs" />
-    <Compile Include="StructuralPatterns\Flyweight\RegisterMoney.cs" />
+    <Compile Include="StructuralPatterns\Flyweight\Currencies\EURMoney.cs" />
+    <Compile Include="StructuralPatterns\Flyweight\ICashRegister.cs" />
+    <Compile Include="StructuralPatterns\Flyweight\RegisterHandlers\CashRegisterEUR.cs" />
+    <Compile Include="StructuralPatterns\Flyweight\RegisterHandlers\CashRegisterRON.cs" />
+    <Compile Include="StructuralPatterns\Flyweight\RegisterHandlers\CashRegisterUSD.cs" />
+    <Compile Include="StructuralPatterns\Flyweight\Currencies\USDMoney.cs" />
+    <Compile Include="StructuralPatterns\Flyweight\Currencies\Money.cs" />
+    <Compile Include="StructuralPatterns\Flyweight\Currencies\RONMoney.cs" />
     <Compile Include="StructuralPatterns\Flyweight\TransferHandler.cs" />
     <Compile Include="StructuralPatterns\Interfaces\IAccount.cs" />
     <Compile Include="StructuralPatterns\SafeAccountProxy.cs" />
