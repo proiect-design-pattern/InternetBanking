@@ -54,10 +54,11 @@
     <Compile Include="StructuralPatterns\Flyweight\TransferHandler.cs" />
     <Compile Include="StructuralPatterns\Interfaces\IAccount.cs" />
     <Compile Include="StructuralPatterns\SafeAccountProxy.cs" />
-    <Compile Include="StructuralPatterns\Flyweight.cs" />
-    <Compile Include="Utils\EAccountType.cs" />
-    <Compile Include="Utils\EBillType.cs" />
-    <Compile Include="Utils\EMobilePhoneNetwork.cs" />
+    <Compile Include="Utils\Helpers\XmlReader.cs" />
+    <Compile Include="Utils\PublicEnums\EAccountType.cs" />
+    <Compile Include="Utils\PublicEnums\EBillType.cs" />
+    <Compile Include="Utils\PublicEnums\ECurrency.cs" />
+    <Compile Include="Utils\PublicEnums\EMobilePhoneNetwork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

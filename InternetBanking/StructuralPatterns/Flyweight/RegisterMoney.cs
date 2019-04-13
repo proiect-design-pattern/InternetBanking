@@ -8,7 +8,6 @@ namespace InternetBanking.StructuralPatterns.Flyweight
 {
     class RegisterMoney : CashRegister
     {
-
         public override Money CreateNewMoney()
         {
             return new Money();
