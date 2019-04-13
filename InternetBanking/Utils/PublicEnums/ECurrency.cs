@@ -32,6 +32,10 @@ namespace InternetBanking.Utils.PublicEnums
       /// SWEDISH KRONA
       /// </summary>
       SEK,
+      /// <summary>
+      /// RON
+      /// </summary>
+      RON,
 
    }
 }

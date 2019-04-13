@@ -19,7 +19,7 @@ namespace InternetBanking.CreationalPatterns
       {
          get { return _id; }
       }
-      public ClientAccount()
+      private ClientAccount()
       {
          _id = 10000;
          _password = "1q2w3e";
