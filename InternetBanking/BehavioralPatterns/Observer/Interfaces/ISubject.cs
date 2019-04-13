@@ -10,6 +10,6 @@ namespace InternetBanking.BehavioralPatterns.Observer.Interfaces
     {
         void Subscribe(Observer observer);
         void Unsubscribe(Observer observer);
-        void Notify();
+        void Notify(double currentBalance);
     }
 }

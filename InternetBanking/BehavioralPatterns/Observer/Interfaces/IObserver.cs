@@ -8,6 +8,6 @@ namespace InternetBanking.BehavioralPatterns.Observer.Interfaces
 {
     interface IObserver
     {
-        void Update();
+        void Update(double currentBalance, double previousBalance);
     }
 }

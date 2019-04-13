@@ -14,9 +14,16 @@ namespace InternetBanking.BehavioralPatterns.Observer
         {
             this.ObserverName = name;
         }
-        public void Update()
+        public void Update(double currentBalance, double previousBalance)
         {
-            Console.WriteLine("");
+           double diff = Math.Abs(currentBalance - previousBalance);
+           if (currentBalance < previousBalance)
+           {
+              Console.WriteLine($"S-a retras din cont suma de : {diff}");
+           } else if (currentBalance > previousBalance)
+           {
+              Console.WriteLine($"S-a adaugat in cont suma de : {diff}");
+           }
         }
     }
 }

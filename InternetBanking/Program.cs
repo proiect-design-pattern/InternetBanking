@@ -50,7 +50,7 @@ namespace InternetBanking
                 case 0:
 
                 default:
-                   "Alegeți o variantă";
+                   Console.WriteLine("Alegeți o variantă");
                    break;
             }
         }

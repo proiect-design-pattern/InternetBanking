@@ -26,14 +26,14 @@ namespace InternetBanking.BehavioralPatterns.Observer
             set
             {
                 if (value > _previousBalance)
-                    Notify();
+                    Notify(value);
                 _previousBalance = value;
             }
         }
 
-        public void Notify()
+        public void Notify(double currentBalance)
         {
-            observers.ForEach(x => x.Update());
+            observers.ForEach(x => x.Update(currentBalance, _previousBalance));
         }
 
         public void Subscribe(Observer observer)
