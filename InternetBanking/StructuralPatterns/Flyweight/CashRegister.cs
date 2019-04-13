@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace InternetBanking.StructuralPatterns.Flyweight
 {
-    class CashRegister
+    public abstract class CashRegister
     {
+        public abstract Money CreateNewMoney();
+        public void CashOut(double value)
+        {
+            //
+        }
     }
 }
