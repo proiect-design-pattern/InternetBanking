@@ -49,7 +49,9 @@
     <Compile Include="BehavioralPatterns\Observer\Observer.cs" />
     <Compile Include="BehavioralPatterns\Memento\Tranzactie.cs" />
     <Compile Include="BehavioralPatterns\Observer\Subject.cs" />
-    <Compile Include="CreationalPatterns\Factory.cs" />
+    <Compile Include="CreationalPatterns\Factory\CurrencyProfileFactory.cs" />
+    <Compile Include="CreationalPatterns\Factory\ECurrencyProfile.cs" />
+    <Compile Include="CreationalPatterns\Factory\Interfaces\ICurrencyProfile.cs" />
     <Compile Include="CreationalPatterns\Singleton.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
