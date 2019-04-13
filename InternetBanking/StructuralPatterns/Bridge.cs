@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InternetBanking.SabloaneStructurale
+namespace InternetBanking.StructuralPatterns
 {
-    class Flyweight
-    {
-    }
+   class Bridge
+   {
+   }
 }
