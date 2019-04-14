@@ -13,6 +13,8 @@ namespace InternetBanking
 {
    class Program
    {
+      private static int sw;
+      private static String input;
       static void Main(string[] args)
       {
          SafeAccountProxy safeAccount = new SafeAccountProxy();
@@ -45,47 +47,53 @@ namespace InternetBanking
          Console.WriteLine("9: Locații și unități ATM" + "\n");
          Console.WriteLine("0: Log out");
 
+         ReadInputCommand();
+         while (sw > 0)
+         {
+            switch (sw) {
+               case 1: {
+                  Console.WriteLine("Introdu parola:");
+                  string password = Console.ReadLine();
+                  safeAccount.Activate(password);
+                  break;
+               }
 
-         Console.WriteLine("Opțiunea dumneavoastră: ");
-         String input = Console.ReadLine();
-         int sw;
-         Int32.TryParse(input, out sw);
+               case 2: {
+                  XmlReader.PrintCurrency();
+                  break;
+               }
 
-         switch (sw) {
-            case 1:
-            {
-               Console.WriteLine("Introdu parola:");
-               string password = Console.ReadLine();
-               safeAccount.Activate(password);
-               break;
+               case 3:
+
+               case 4:
+
+               case 5:
+
+               case 6:
+
+               case 7:
+
+               case 8:
+
+               case 9:
+
+               case 0:
+
+               default:
+                  ReadInputCommand();
+                  break;
             }
 
-            case 2:
-            {
-               XmlReader.PrintCurrency();
-               break;
-            }
-
-            case 3:
-
-            case 4:
-
-            case 5:
-
-            case 6:
-
-            case 7:
-
-            case 8:
-
-            case 9:
-
-            case 0:
-
-            default:
-               Console.WriteLine("Alegeți o variantă");
-               break;
          }
+
+      }
+
+      private static void ReadInputCommand()
+      {
+         Console.WriteLine("Opțiunea dumneavoastra: ");
+         input = Console.ReadLine();
+         sw = -1;
+         Int32.TryParse(input, out sw);
       }
    }
 }
