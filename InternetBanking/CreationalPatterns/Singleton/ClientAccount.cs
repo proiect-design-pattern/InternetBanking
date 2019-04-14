@@ -13,7 +13,7 @@ namespace InternetBanking.CreationalPatterns.Singleton
       private string _password;
       private static ClientAccount _instance;
 
-      public double Balance { get; set;}
+      public double Balance { get; private set;}
 
       public long ID
       {
@@ -41,9 +41,16 @@ namespace InternetBanking.CreationalPatterns.Singleton
          Console.WriteLine(Balance);
       }
 
-
-      public bool Activate(string oldPassword, string newPassword)
+      public void Deposit(double value)
       {
+         Balance = value;
+      }
+
+
+      public bool Activate(string oldPassword)
+      {
+         Console.WriteLine("Introdu noua parola:");
+         string newPassword = Console.ReadLine();
          if (Login(oldPassword))
          {
             _password = newPassword;

@@ -19,7 +19,7 @@ namespace InternetBanking.Utils.Helpers
 
       public static void ReadCurrency()
       {
-         try { 
+         try {
             // Load the data.
             XmlDocument doc = new XmlDocument();
             doc.Load(URL);
@@ -27,16 +27,14 @@ namespace InternetBanking.Utils.Helpers
 
             // Process the resource nodes.
             XmlNodeList nList = doc.DocumentElement.GetElementsByTagName("Rate");
-            foreach (XmlNode node in nList)
-            {
-               string currency = node.Attributes.GetNamedItem("currency").ToString();
+            foreach (XmlNode node in nList) {
+               string currency = node.Attributes.GetNamedItem("currency").Value;
                Double.TryParse(node.InnerText, out double value);
                int multiplier = -1;
-               if (node.Attributes.GetNamedItem("multiplier") != null)
-               {
+               if (node.Attributes.GetNamedItem("multiplier") != null) {
                   int.TryParse(node.Attributes.GetNamedItem("multiplier").Value, out multiplier);
                }
-               ExchangeRates.Add(currency.Substring(10, 13), new KeyValuePair<double, int>(value, multiplier));
+               ExchangeRates.Add(currency, new KeyValuePair<double, int>(value, multiplier));
             }
          } catch (Exception ex) {
             Console.WriteLine();
@@ -45,13 +43,18 @@ namespace InternetBanking.Utils.Helpers
 #endif
          }
       }
-        public static void PrintCurrency()
-        {
-            ReadCurrency();
-            foreach (KeyValuePair<string, KeyValuePair<double, int>> kvp in _exchangeRates)
-            {
-                Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
+      public static void PrintCurrency()
+      {
+         ReadCurrency();
+         foreach (KeyValuePair<string, KeyValuePair<double, int>> kvp in ExchangeRates) {
+            if (kvp.Value.Value != -1) {
+               Console.WriteLine($"currency: {kvp.Key} with value: {kvp.Value.Key} and multiplier: {kvp.Value.Value}");
             }
-        }
-    }
+            else
+            {
+               Console.WriteLine($"currency: {kvp.Key} with value: {kvp.Value.Key}");
+            }
+         }
+      }
+   }
 }

@@ -7,7 +7,7 @@ using InternetBanking.StructuralPatterns.Interfaces;
 
 namespace InternetBanking.StructuralPatterns
 {
-   public class SafeAccountProxy :IAccount
+   public class SafeAccountProxy : IAccount
    {
       public IAccount RealSubject { get; set; }
       public void DisplayBalance()
@@ -21,9 +21,14 @@ namespace InternetBanking.StructuralPatterns
          }
       }
 
-      public bool Activate(string oldPassword, string newPassword)
+      public void Deposit(double value)
       {
-         return RealSubject.Activate(oldPassword, newPassword);
+         RealSubject.Deposit(value);
+      }
+
+      public bool Activate(string oldPassword)
+      {
+         return RealSubject.Activate(oldPassword);
       }
 
       public bool Login(string password)

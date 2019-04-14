@@ -1,11 +1,12 @@
 ﻿using InternetBanking.CreationalPatterns.Singleton;
+using InternetBanking.StructuralPatterns.Interfaces;
 
 namespace InternetBanking.CreationalPatterns.Factory.Interfaces
 {
    public interface ICurrencyProfile
     {
-        ClientAccount Client { get; set; }
-        ECurrencyProfile profileCurrency { get; set; }
+        IAccount Client { get; set; }
+        ECurrencyProfile ProfileCurrency { get; set; }
         void Deposit(double value);
 
     }

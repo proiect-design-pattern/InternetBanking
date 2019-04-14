@@ -9,7 +9,8 @@ namespace InternetBanking.StructuralPatterns.Interfaces
    public interface IAccount
    {
       void DisplayBalance();
-      bool Activate(string oldPassword, string newPassword);
+      void Deposit(double value);
+      bool Activate(string oldPassword);
       bool Login(string password);
    }
 }
