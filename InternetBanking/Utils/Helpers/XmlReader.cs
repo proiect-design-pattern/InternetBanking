@@ -12,7 +12,8 @@ namespace InternetBanking.Utils.Helpers
 {
    public class XmlReader
    {
-      private static Dictionary<string, KeyValuePair<double, int>> _exchangeRates = new Dictionary<string, KeyValuePair<double, int>>();
+      public static Dictionary<string, KeyValuePair<double, int>> ExchangeRates { get; private set; } =
+         new Dictionary<string, KeyValuePair<double, int>>();
 
       private static string URL = "http://www.bnr.ro/nbrfxrates.xml?format=xml";
 
@@ -35,7 +36,7 @@ namespace InternetBanking.Utils.Helpers
                {
                   int.TryParse(node.Attributes.GetNamedItem("multiplier").Value, out multiplier);
                }
-               _exchangeRates.Add(currency.Substring(10, 13), new KeyValuePair<double, int>(value, multiplier));
+               ExchangeRates.Add(currency.Substring(10, 13), new KeyValuePair<double, int>(value, multiplier));
             }
          } catch (Exception ex) {
             Console.WriteLine();
