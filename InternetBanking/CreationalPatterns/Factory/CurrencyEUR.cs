@@ -1,13 +1,9 @@
 ﻿using InternetBanking.CreationalPatterns.Factory.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using InternetBanking.CreationalPatterns.Singleton;
 
 namespace InternetBanking.CreationalPatterns.Factory
 {
-    public class CurrencyEUR : ICurrencyProfile
+   public class CurrencyEUR : ICurrencyProfile
     {
         public ClientAccount Client { get; set; }
         public ECurrencyProfile profileCurrency { get; set; }

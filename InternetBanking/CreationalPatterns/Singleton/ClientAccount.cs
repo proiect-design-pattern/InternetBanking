@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using InternetBanking.StructuralPatterns.Interfaces;
 
-namespace InternetBanking.CreationalPatterns
+namespace InternetBanking.CreationalPatterns.Singleton
 {
    public class ClientAccount : IAccount
    {
