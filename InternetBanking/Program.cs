@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InternetBanking.Utils.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace InternetBanking
     {
         static void Main(string[] args)
         {
+            //XmlReader.PrintCurrency();
             Console.WriteLine("1: Schimbă parola:" + "\n");
             Console.WriteLine("2: Curs de schimb valutar"+"\n");
             Console.WriteLine("3: Schimb valutar"+"\n");

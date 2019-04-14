@@ -45,5 +45,13 @@ namespace InternetBanking.Utils.Helpers
 #endif
          }
       }
-   }
+        public static void PrintCurrency()
+        {
+            ReadCurrency();
+            foreach (KeyValuePair<string, KeyValuePair<double, int>> kvp in _exchangeRates)
+            {
+                Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
+            }
+        }
+    }
 }
