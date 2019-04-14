@@ -5,11 +5,12 @@ using System.Runtime.Remoting;
 using System.Text;
 using System.Threading.Tasks;
 using InternetBanking.StructuralPatterns.Flyweight.Currencies;
+using InternetBanking.Utils.PublicEnums;
 
 namespace InternetBanking.StructuralPatterns.Flyweight
 {
-   public interface ICashRegister
+   public interface ITransferRegister
    {
-       void CacheOut(double val);
+       void CacheOut(ECurrency toCurrency, double val);
    }
 }

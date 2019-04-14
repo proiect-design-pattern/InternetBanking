@@ -11,23 +11,42 @@ namespace InternetBanking.StructuralPatterns.Flyweight
 {
    public abstract class TransferHandler
    {
-      public CashRegisterEUR CashRegisterEUR { get; set; }
-      public CashRegisterRON CashRegisterRON { get; set; }
-      public CashRegisterUSD CashRegisterUSD { get; set; }
+      public EurTransferHandler TEurTransfer { get; set; }
+      public RonTransferHandler TRonTransfer { get; set; }
+      public UsdTransferHandler TUsdTransfer { get; set; }
       public abstract Money CreateNewMoney();
 
       public TransferHandler()
       {
-         CashRegisterEUR = new CashRegisterEUR();
-         CashRegisterRON = new CashRegisterRON();
-         CashRegisterUSD = new CashRegisterUSD();
+         TEurTransfer = new EurTransferHandler();
+         TRonTransfer = new RonTransferHandler();
+         TUsdTransfer = new UsdTransferHandler();
       }
 
-      public void CashOut(ECurrency currency, double value)
+      public void CashOut(ECurrency fromCurrency, ECurrency toCurrency, double value)
       {
+         GetTransferHandler(fromCurrency).CacheOut(toCurrency, value);
+      }
+      private ITransferRegister GetTransferHandler(ECurrency type)
+      {
+         ITransferRegister handlerRegister = null;
+         switch (type) {
+            case ECurrency.EUR: {
+               handlerRegister = TEurTransfer;
+               break;
+            }
+            case ECurrency.RON: {
+               handlerRegister = TRonTransfer;
+               break;
+            }
+            case ECurrency.USD: {
+               handlerRegister = TUsdTransfer;
+               break;
+            }
+         }
 
-
+         return handlerRegister;
       }
    }
-   }
+}
 
