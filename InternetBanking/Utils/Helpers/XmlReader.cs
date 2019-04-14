@@ -15,6 +15,7 @@ namespace InternetBanking.Utils.Helpers
       private static Dictionary<string, KeyValuePair<double, int>> _exchangeRates = new Dictionary<string, KeyValuePair<double, int>>();
 
       private static string URL = "http://www.bnr.ro/nbrfxrates.xml?format=xml";
+        
 
       public static void ReadCurrency()
       {
@@ -44,5 +45,12 @@ namespace InternetBanking.Utils.Helpers
 #endif
          }
       }
-   }
+        public static void Print()
+        {
+            foreach (KeyValuePair<string, KeyValuePair<double, int>> kvp in _exchangeRates)
+            {
+                Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
+            }
+        }
+    }
 }
