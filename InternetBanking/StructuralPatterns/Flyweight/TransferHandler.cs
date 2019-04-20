@@ -9,13 +9,11 @@ using InternetBanking.StructuralPatterns.Flyweight.RegisterHandlers;
 
 namespace InternetBanking.StructuralPatterns.Flyweight
 {
-   public abstract class TransferHandler
+   public class TransferHandler
    {
       public EurTransferHandler TEurTransfer { get; set; }
       public RonTransferHandler TRonTransfer { get; set; }
       public UsdTransferHandler TUsdTransfer { get; set; }
-      public abstract Money CreateNewMoney();
-
       public TransferHandler()
       {
          TEurTransfer = new EurTransferHandler();
