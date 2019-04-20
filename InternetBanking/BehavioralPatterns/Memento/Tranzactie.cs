@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InternetBanking.BehavioralPatterns
+namespace InternetBanking.BehavioralPatterns.Memento
 {
     class Tranzactie
     {
@@ -13,12 +13,12 @@ namespace InternetBanking.BehavioralPatterns
         {
             this.State = state;
         }
-        public Memento SavetToMemento()
+        public MementoObj SavetToMemento()
         {
-            return new Memento( State );
+            return new MementoObj( State );
 
         }
-        public void RestoreFromMemento(Memento memento)
+        public void RestoreFromMemento(MementoObj memento)
         {
             State = memento.State;
         }

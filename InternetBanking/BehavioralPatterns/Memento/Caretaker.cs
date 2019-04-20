@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using InternetBanking.BehavioralPatterns;
 
-namespace InternetBanking.BehavioralPatterns
+namespace InternetBanking.BehavioralPatterns.Memento 
 {
     class Caretaker
     {
-        private Dictionary<string, Memento> _keyPointState = new Dictionary<string, Memento>();
-        public void AddKeyState ( string description, Memento memento)
+        private Dictionary<string, MementoObj> _keyPointState = new Dictionary<string, MementoObj>();
+        public void AddKeyState ( string description, MementoObj memento)
         {
             _keyPointState.Add(description, memento);
         }
