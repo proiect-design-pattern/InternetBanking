@@ -8,6 +8,7 @@ namespace InternetBanking.Utils.PublicEnums
 {
    public enum EBillType
    {
+      NO_BILL,
       EElectricityBill,
       EWaterBill,
       EGasBill,

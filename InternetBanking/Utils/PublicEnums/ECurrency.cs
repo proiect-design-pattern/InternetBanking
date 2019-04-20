@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace InternetBanking.Utils.PublicEnums
 {
-   public enum ECurrency
+   public enum ECurrency : int
    {
+      NO_CURRENCY = -1,
       /// <summary>
       /// EURO
       /// </summary>

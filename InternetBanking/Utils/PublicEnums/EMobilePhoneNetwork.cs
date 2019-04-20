@@ -8,6 +8,7 @@ namespace InternetBanking.Utils.PublicEnums
 {
    public enum EMobilePhoneNetwork
    {
+      NO_AVAIBLE_NETWORK,
       Telekom,
       Vodafone,
       Digi,
