@@ -23,12 +23,12 @@ namespace InternetBanking.StructuralPatterns.Flyweight.RegisterHandlers
          double sumInRon;
 
          XmlReader.ExchangeRates.TryGetValue(ECurrency.USD.ToString(), out usdPair);
-         XmlReader.ExchangeRates.TryGetValue(toCurrency.ToString(), out eurPair);
-         sumInRon = (double) (val * eurPair.Key);
+         XmlReader.ExchangeRates.TryGetValue(ECurrency.EUR.ToString(), out eurPair);
+         sumInRon = (double) (val / eurPair.Key);
 
          switch (toCurrency) {
             case ECurrency.USD:
-               money.TotalCacheValue = (double) (sumInRon / usdPair.Key);
+               money.TotalCacheValue = (double) (sumInRon * usdPair.Key);
                break;
             case ECurrency.EUR:
                money.TotalCacheValue = val;

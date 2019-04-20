@@ -23,16 +23,16 @@ namespace InternetBanking.StructuralPatterns.Flyweight.RegisterHandlers
 
          switch (toCurrency) {
             case ECurrency.USD:
-               money.TotalCacheValue = (double) (val / usdPair.Key);
+               money.TotalCacheValue = (double) (val * usdPair.Key);
                break;
             case ECurrency.EUR:
-               money.TotalCacheValue = (double) (val / eurPair.Key);
+               money.TotalCacheValue = (double) (val * eurPair.Key);
                break;
             case ECurrency.RON:
                money.TotalCacheValue = val;
                break;
          }
-         Console.WriteLine($"{money.TotalCacheValue} {ECurrency.RON}");
+         Console.WriteLine($"Valoare {money.TotalCacheValue} {ECurrency.RON}");
 
       }
    }
