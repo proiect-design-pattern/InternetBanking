@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BehavioralPatterns\Memento\Caretaker.cs" />
-    <Compile Include="BehavioralPatterns\Memento\Memento.cs" />
+    <Compile Include="BehavioralPatterns\Memento\MementoObj.cs" />
     <Compile Include="BehavioralPatterns\Observer\Interfaces\IObserver.cs" />
     <Compile Include="BehavioralPatterns\Observer\Interfaces\ISubject.cs" />
     <Compile Include="BehavioralPatterns\Observer\Observer.cs" />
@@ -68,6 +68,7 @@
     <Compile Include="StructuralPatterns\Flyweight\TransferHandler.cs" />
     <Compile Include="StructuralPatterns\Interfaces\IAccount.cs" />
     <Compile Include="StructuralPatterns\SafeAccountProxy.cs" />
+    <Compile Include="Utils\Helpers\Util.cs" />
     <Compile Include="Utils\Helpers\XmlReader.cs" />
     <Compile Include="Utils\PublicEnums\EAccountType.cs" />
     <Compile Include="Utils\PublicEnums\EBillType.cs" />
