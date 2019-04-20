@@ -1,4 +1,5 @@
-﻿using InternetBanking.CreationalPatterns.Factory.Interfaces;
+﻿using System;
+using InternetBanking.CreationalPatterns.Factory.Interfaces;
 using InternetBanking.StructuralPatterns.Interfaces;
 
 namespace InternetBanking.CreationalPatterns.Factory
@@ -7,10 +8,14 @@ namespace InternetBanking.CreationalPatterns.Factory
     {
         public IAccount Client { get; set; }
         public ECurrencyProfile ProfileCurrency { get; set; }
-
-        public void Deposit(double value)
+        public void SendMoney(string IBAN, double value)
         {
-            Client.Deposit(value);
-        }
+           bool ok = Client.TransferUsd(value);
+           if (ok) {
+              Console.WriteLine("Tranzactia s-a desfasurat cu succes.");
+           } else {
+              Console.WriteLine("Fonduri insuficiente.");
+           }
+      }
     }
 }
