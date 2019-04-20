@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using InternetBanking.StructuralPatterns.Interfaces;
+using InternetBanking.Utils.PublicEnums;
 
 namespace InternetBanking.CreationalPatterns.Singleton
 {
@@ -13,8 +14,9 @@ namespace InternetBanking.CreationalPatterns.Singleton
       private string _password;
       private static ClientAccount _instance;
 
-      public double Balance { get; private set;}
-
+      private double EurBalance { get; set; }
+      private double RonBalance { get; set; }
+      private double UsdBalance { get; set; }
       public long ID
       {
          get { return _id; }
@@ -36,17 +38,65 @@ namespace InternetBanking.CreationalPatterns.Singleton
             }
             return _instance;
       }
-      public void DisplayBalance()
+
+      public void DisplayEurBalance()
       {
-         Console.WriteLine(Balance);
+         Console.WriteLine($"{EurBalance} {ECurrency.EUR}");
       }
 
-      public void Deposit(double value)
+      public void DisplayRonBalance()
       {
-         Balance = value;
+         Console.WriteLine($"{RonBalance} {ECurrency.RON}");
       }
 
+      public void DisplayUsdBalance()
+      {
+         Console.WriteLine($"{UsdBalance} {ECurrency.USD}");
+      }
 
+      public void DepositEur(double value)
+      {
+         EurBalance += value;
+      }
+
+      public void DepositRon(double value)
+      {
+         RonBalance += value;
+      }
+
+      public void DepositUsd(double value)
+      {
+         UsdBalance += value; //notify
+      }
+
+      public bool TransferRon(double value)
+      {
+         if (value <= RonBalance)
+         {
+            RonBalance -= value; // notify
+            return true;
+         }
+
+         return false;
+      }
+      public bool TransferUsd(double value)
+      {
+         if (value <= UsdBalance) {
+            UsdBalance -= value; // notify
+            return true;
+         }
+
+         return false;
+      }
+      public bool TransferEur(double value)
+      {
+         if (value <= EurBalance) {
+            EurBalance -= value; // notify
+            return true;
+         }
+
+         return false;
+      }
       public bool Activate(string oldPassword)
       {
          Console.WriteLine("Introdu noua parola:");

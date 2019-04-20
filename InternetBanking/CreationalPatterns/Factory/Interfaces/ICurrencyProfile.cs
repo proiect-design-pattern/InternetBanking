@@ -7,7 +7,6 @@ namespace InternetBanking.CreationalPatterns.Factory.Interfaces
     {
         IAccount Client { get; set; }
         ECurrencyProfile ProfileCurrency { get; set; }
-        void Deposit(double value);
-
+        void SendMoney(string IBAN, double value);
     }
 }

@@ -12,7 +12,7 @@ namespace InternetBanking.Utils.Helpers
 {
    public class XmlReader
    {
-      public static Dictionary<string, KeyValuePair<double, int>> ExchangeRates { get; private set; } =
+      public static Dictionary<string, KeyValuePair<double, int>> ExchangeRates { get;} =
          new Dictionary<string, KeyValuePair<double, int>>();
 
       private static string URL = "http://www.bnr.ro/nbrfxrates.xml?format=xml";
@@ -45,14 +45,13 @@ namespace InternetBanking.Utils.Helpers
       }
       public static void PrintCurrency()
       {
-         ReadCurrency();
          foreach (KeyValuePair<string, KeyValuePair<double, int>> kvp in ExchangeRates) {
             if (kvp.Value.Value != -1) {
-               Console.WriteLine($"currency: {kvp.Key} with value: {kvp.Value.Key} and multiplier: {kvp.Value.Value}");
+               Console.WriteLine($"\tcurrency: {kvp.Key} with value: {kvp.Value.Key} and multiplier: {kvp.Value.Value}\n");
             }
             else
             {
-               Console.WriteLine($"currency: {kvp.Key} with value: {kvp.Value.Key}");
+               Console.WriteLine($"\tcurrency: {kvp.Key} with value: {kvp.Value.Key}\n");
             }
          }
       }
